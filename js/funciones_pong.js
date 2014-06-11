@@ -41,25 +41,6 @@ $(document).ready(function() {
 		context.fillText("Rebotes: " + rebotes, 20, 20);
 	}
 
-	// Parte inacabada
-	/*function adivinar(posicion){
-	
-		var direccion = "http://188.226.176.242/dawe/rebotes.php";
-
-		var mensaje = "";
-		
-		var xhr = new XMLHttpRequest();
-		xhr.open('POST', direccion, true);	
-		xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-		xhr.onload = function () {
-			//console.log(this.responseText);
-			if(this.responseText=="correcto"){
-				console.log(posicion);
-			}
-		};
-		xhr.send("mensaje=" + mensaje);	
-	}	/*
-
 	// Inicializa la bola en el centro del campo con sus valores iniciales
 	function crearBola(){
 		var posicion_x = Math.floor(lienzo.width / 2);
@@ -67,25 +48,12 @@ $(document).ready(function() {
 		bola = new Bola([posicion_x,posicion_y], "#ffffff", [0,0], 20);
 	}
 
-	// Inicializa las dos raquetas en la posición (0,200) y (592,200). 
+	// Inicializa las dos raquetas en la posiciï¿½n (0,200) y (592,200). 
 	function crearRaquetas(){
 		var posicion_y = Math.floor(lienzo.height / 2);
 		raqI = new Raqueta(0,posicion_y);
 		raqD = new Raqueta(592,posicion_y)
 	}
-	
-	//Funcion usada para calcular los codigos numericos de las letras Q(81), A(65), P(80) y L(76).
-	/*function callkeydownhandler(evnt) {
-		var ev = (evnt) ? evnt : event;
-		var code=(ev.which) ? ev.which : event.keyCode;
-		alert("El codigo de la tecla pulsada es: " + code);
-	}
-	
-	if (window.document.addEventListener) {
-		window.document.addEventListener("keydown", callkeydownhandler, false);
-	} else {
-		window.document.attachEvent("onkeydown", callkeydownhandler);
-	}*/
 	
 	function actualizar(){
 		if (colision(0,400,1)){
